@@ -1,0 +1,26 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "LiquidityLockupHook",
+    "constructorArgs": [
+      "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+    ],
+    "permissions": [
+      "afterAddLiquidity",
+      "beforeRemoveLiquidity"
+    ]
+  },
+  "token": {
+    "contract": "Lockup",
+    "name": "Lockup",
+    "symbol": "LKUP",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336000"
+  },
+  "notes": "Technical description for the approved Sepolia launch. Sources: src/LiquidityLockupHook.sol and src/Lockup.sol; ABIs: docs/abi/LiquidityLockupHook.json and docs/abi/Lockup.json. The hook takes only the Sepolia PoolManager address; the token has no constructor arguments. The hook address must carry permission bits 0x0600, enforced by Hooks.validateHookPermissions. Every callback requires the PoolManager. The pool has currency0 native ETH and currency1 LKUP. initialPrice is decimal sqrtPriceX96, equal to 1000 * 2^96, representing 1 ETH = 1,000,000 LKUP; it matches script/LaunchConfig.sol and the one-sided LKUP seed and first-buy rehearsal. For native-ETH pools, each positive liquidity add sets unlockAt[poolId][positionKey] to block.timestamp + 30 days and emits Locked; every top-up restarts the full window, including for the factory seed. The position key is keccak256(abi.encodePacked(sender, tickLower, tickUpper, salt)), matching the PoolManager. Negative liquidity deltas revert with StillLocked before unlockAt; removal at unlockAt and zero-delta fee collection pass. Pools whose currency0 is not native ETH are unaffected. No hook fees or return deltas; swaps, donations and initialization do not invoke the hook. There are no administrative functions or early-unlock mechanisms. Known limit: anyone adding through a shared router to the same router/range/salt key restarts that position's lock. LPs should use the published Sepolia PositionManager, which uses each NFT tokenId as its salt. This manifest does not set launch policy or attest deployment or review completion; policy, signed artifact linkage and deployment are handled by later services."
+}
