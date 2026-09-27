@@ -1,0 +1,9 @@
+# Path budget: this file only; 512 bytes maximum.
+**/node_modules/
+**/.npm/
+**/.cache/
+**/.vite/
+**/coverage/
+**/test-results/
+**/playwright-report/
+*.tsbuildinfo

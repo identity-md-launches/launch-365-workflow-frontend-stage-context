@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-09-27T07:02:57.166Z",
+  "status": "passed",
+  "checks": [
+    "Gateway subpath loads manifest, verified ABIs and assets; repeated Locked events deduplicate and locked total uses current liquidity (14e18 L)",
+    "Disconnected filter, invalid tokenId focus, missing NFT error, and successful tokenId lookup",
+    "Wallet rejection recovered; wrong-chain banner and exact switch/add/switch chain flow",
+    "NFT ownership gates actions; removal disabled one second or more before unlock and enabled at exact block timestamp boundary",
+    "Automated axe WCAG A/AA audit of connected desktop state",
+    "Measured solid text and focus color pairs from rendered tokens",
+    "Visible 3px focus indicator uses a contrasting light color on the dark hero",
+    "Cancelling an inline review restores keyboard focus to its trigger",
+    "Locked position fee collection simulates, requests wallet confirmation, uses PositionManager zero delta and confirms receipt",
+    "Ownership change after review is caught before any removal signature",
+    "Empty retained NFT remains in the ledger with disabled removal and its original unlock details",
+    "Removal review, slippage minimums, simulation revert (no send), wallet rejection (no send), successful full decrease and wallet payout",
+    "Native ETH quote and simulated Universal Router buy, exact ETH value and no approvals",
+    "Token sell requires two separate bounded approvals, then simulates and sends with no ETH value",
+    "Quote revert is visible and cannot leave an actionable stale quote",
+    "Amount changes invalidate quote and approvals UI",
+    "Account change refreshes balances and ownership and clears transaction panels",
+    "800px, 390px and 320px reflow without horizontal overflow; full-page screenshots captured",
+    "200% root text enlargement at 800px without document overflow (not browser-native zoom)",
+    "Keyboard skip link, native form submission and error focus inspected",
+    "Empty contract code disables all transaction controls and refresh recovers",
+    "RPC failure labels stale data and disables actions",
+    "Missing wallet retains public reads and explains recovery",
+    "Tampered ABI fails closed before rendering transaction controls",
+    "No uncaught browser JavaScript errors or failed static resources in mocked scenarios"
+  ],
+  "errors": [],
+  "screenshots": [
+    "docs/frontend/desktop.png",
+    "docs/frontend/hero-focus.png",
+    "docs/frontend/tablet.png",
+    "docs/frontend/mobile.png",
+    "docs/frontend/mobile-viewport.png",
+    "docs/frontend/narrow.png",
+    "docs/frontend/text-200.png",
+    "docs/frontend/keyboard-focus.png",
+    "docs/frontend/live-desktop.png"
+  ],
+  "axe": {
+    "violations": [],
+    "passes": 28
+  },
+  "contrast": [
+    {
+      "foreground": "#263a32",
+      "background": "#f4f4ef",
+      "ratio": 10.98
+    },
+    {
+      "foreground": "#59675f",
+      "background": "#fff",
+      "ratio": 5.95
+    },
+    {
+      "foreground": "#59675f",
+      "background": "#f4f4ef",
+      "ratio": 5.39
+    },
+    {
+      "foreground": "#263a32",
+      "background": "#dbe98b",
+      "ratio": 9.25
+    },
+    {
+      "foreground": "#f4f6e9",
+      "background": "#223a32",
+      "ratio": 11.17
+    },
+    {
+      "foreground": "#c5d0bc",
+      "background": "#223a32",
+      "ratio": 7.63
+    },
+    {
+      "foreground": "#c5d0bc",
+      "background": "#294037",
+      "ratio": 6.97
+    },
+    {
+      "foreground": "#902b25",
+      "background": "#fff1ed",
+      "ratio": 7.45
+    },
+    {
+      "foreground": "#28563e",
+      "background": "#e4efdf",
+      "ratio": 7.11
+    },
+    {
+      "foreground": "#345e9c",
+      "background": "#fff",
+      "ratio": 6.51
+    },
+    {
+      "foreground": "#345e9c",
+      "background": "#f4f4ef",
+      "ratio": 5.9
+    }
+  ],
+  "liveBrowser": {
+    "status": "passed",
+    "state": "Liquidity still locked\nL\n\n1.134E23\n1 locked positions · all ranges\n\nActive pool liquidity\nL\n\n0\nLiquidity at the current tick\n\nPool price\nLKUP / ETH\n\n50,000,000\n0.3% pool fee · no hook fee",
+    "errors": []
+  }
+}

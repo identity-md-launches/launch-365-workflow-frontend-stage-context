@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-09-27T07:06:11.853Z",
+  "status": "passed",
+  "details": {
+    "snapshot": {
+      "block": "11791725",
+      "timestamp": "1790492760",
+      "fetchedAt": 1790492772123,
+      "sqrtPrice": "560227709747861399187319382274582",
+      "tick": 177284,
+      "activeLiquidity": "0",
+      "duration": "2592000",
+      "positions": [
+        {
+          "key": "0x3c982fc990277b9af6a80afc129ef417a824425fe6acd7d6d7ad22bee64827c2",
+          "sender": "0xa6b1728c29Eb4300e306B63F5C7eC2eDFc2eF7C5",
+          "lower": -887220,
+          "upper": 177240,
+          "salt": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "liquidity": "113387377674367368214378",
+          "unlockAt": "1793081100",
+          "eventHash": "0x520a2310c5802056e51d52e8c5190c8a2ea231f61f4337aebcd59b7b4ecf3f6f",
+          "blockNumber": "11791421"
+        }
+      ],
+      "lockedLiquidity": "113387377674367368214378",
+      "decimals": 18,
+      "symbol": "LKUP"
+    },
+    "rpcUrls": [
+      "https://ethereum-sepolia-rpc.publicnode.com",
+      "https://rpc.sepolia.ethpandaops.io",
+      "https://sepolia.rpc.sentio.xyz"
+    ],
+    "poolId": "0x22ec17ea1d6834f5130ea573f47738075dd42d40061789f8db26e07ab0db35dd",
+    "checks": [
+      "RPC chain ID",
+      "Nonempty code at both handoff contracts and all six Uniswap addresses",
+      "Hook, StateView, and PositionManager poolManager bindings",
+      "StateView pool and position reads",
+      "Complete Locked event scan from deployment block",
+      "Hook unlockAt matches latest events",
+      "Onchain token decimals and symbol"
+    ],
+    "transactionsBroadcast": 0
+  }
+}
